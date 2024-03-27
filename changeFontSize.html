@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Change font size of text on clicking the button</title>
+    </head>
+
+    <body>
+        <p id="text">hello, click me to change my font</p>
+        <button id="btn">click me!</button>
+
+        <script>
+            const Btn = document.getElementById("btn");
+            btn.addEventListener("click", function(event){
+                const txt = document.getElementById("text");
+                txt.style.fontSize = "32px";
+            });
+        </script>
+    </body>
+</html>
