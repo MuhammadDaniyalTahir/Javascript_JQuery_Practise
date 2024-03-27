@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <input type="text" id="input"><br>
+        <button id="btn">Print Table</button>
+        <!-- <div id="tableDiv">
+
+        </div> -->
+        <table id="tableDiv">
+            
+        </table>
+
+        <script>
+            const btn = document.getElementById("btn");
+            btn.addEventListener("click", function(event){
+                let input = document.getElementById("input");
+                let value = parseInt(input.value.trim());
+                
+                let num1 = 3;
+                let div = document.getElementById("tableDiv");
+                for(let i = 1; i <= 10; i++){
+                    let tableRow = document.createElement("tr");
+                    tableRow.style.backgroundColor="red";
+                    let tableData = document.createElement("td");
+                    tableData.innerHTML = value + " x " + i + " = " + (value*i);
+                    tableRow.appendChild(tableData);
+                    div.appendChild(tableRow);
+                }
+                
+            });
+        </script>
+    </body>
+</html>
