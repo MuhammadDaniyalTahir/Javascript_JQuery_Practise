@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <div>
+            <img src="bulbOn.png" alt="Image not accessible" id="image">
+        </div>
+        <script>
+            const image = document.getElementById("image");
+            image.addEventListener("click", function(event){
+                this.src="bulbOff.png";
+            });
+        </script>
+    </body>
+</html>
