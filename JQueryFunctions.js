@@ -6,28 +6,28 @@ $(document).ready(function () {
 
 // <!-- task 1 completed till now -->
 
-$(document).ready(function () {
-    $("#msgBtn").click(function () {
+$(document).ready(function(){
+    $("#msgBtn").click(function(){
         $("#msgPara").text("Here is a msg for you!");
     });
 });
 
 // <!-- task 2 completed till now -->
 
-$(document).ready(function () {
-    $("#colorBtn").click(function () {
+$(document).ready(function(){
+    $("#colorBtn").click(function(){
         $("#colorPara").css("background-color", "red");
     })
-})
+});
 
 // <!-- task 3 completed till now -->
 
-$(document).ready(function () {
-    $("#submitt").click(function (event) {
+$(document).ready(function(){
+    $("#submitt").click(function(event){
 
         let email = $("#email").val();
         let password = $("#password").val();
-
+        
 
         if (email == "" || password == "") {
             alert("Please fill all fields");
@@ -38,26 +38,10 @@ $(document).ready(function () {
 
 // <!-- task 4 completed till now -->
 
-$(document).ready(function () {
-    // Function to add class on hover
-    function addClassOnHover(elementSelector, className) {
-        // Add hover event handler to the specified element
-        $(elementSelector).hover(
-            // Mouseover event handler
-            function () {
-                // Add the specified class to the element
-                $(this).addClass(className);
-            },
-            // Mouseout event handler
-            function () {
-                // Remove the specified class from the element
-                $(this).removeClass(className);
-            }
-        );
-    }
-
-    // Example usage:
-    // Call the function with the element selector and class name
-    addClassOnHover('#exampleElement', 'hoverClass');
+$(document).ready(function(){
+    $("#addClassDiv").hover(function(){
+        $(this).addClass("addClassDiv");
+    });
 });
+
 
