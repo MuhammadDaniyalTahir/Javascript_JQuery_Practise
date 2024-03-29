@@ -3,7 +3,81 @@
 <head>
     <title>Jquery practise</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .modal {
+            display: none;
+            /* Hide the modal by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scrolling if needed */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black background with opacity */
+        }
 
+        /* Modal content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* 80% of modal width */
+        }
+
+        /* Close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Tooltip text */
+        .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Show the tooltip text when hovering over the tooltip container */
+        /* .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        } */
+    </style>
 </head>
 
 <body>
@@ -38,11 +112,36 @@
 
     <!-- task 4 completed till now -->
 
-    <divn id="addClassDiv">Add class to this div in task f</div>
+    <div id="addClassDiv">Add class to this div in task f</div>
+
+    <button id="openModalBtn">Open Modal</button>
+    <!-- The modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>This is a modal window.</p>
+        </div>
+    </div>
+
+    <div class="tooltip" id="myTooltip">
+        Hover over me to see tooltip
+        <span class="tooltiptext">Tooltip text</span>
+    </div>
+
+    <ul id="itemList">
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Pineapple</li>
+      </ul>
+      
+      <!-- Button to sort the list -->
+      <button id="sortButton">Sort List</button>
+
 
     <footer>
         <script src="JQueryFunctions.js"></script>
     </footer>
 
 </body>
-
